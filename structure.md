@@ -47,6 +47,7 @@ classDiagram
         +integer: id
         +text: value
         +text: short_value
+        +integer: activity_id
         +integer: language_id
         +datetime: date_created
         +datetime: date_updated
@@ -59,4 +60,5 @@ classDiagram
         +datetime: date_created
         +datetime: date_updated
     }
+            
 ```  
