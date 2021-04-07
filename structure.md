@@ -12,8 +12,10 @@ classDiagram
         +string: name
         +string: image_thumbnail
         +text: url
-        +datetime: date_created
-        +datetime: date_updated
+        +integer: discount
+        +datetime: discount_date
+        +datetime: date_init
+        +datetime: date_finish
         +getCountTotalActivity(id) int
     }
     class Activity {
@@ -21,8 +23,8 @@ classDiagram
         +text: url
         +integer: discount
         +datetime: discount_date
-        +datetime: date_created
-        +datetime: date_updated
+        +datetime: date_init
+        +datetime: date_finish
         +getPrice(activity_id) array
         +getDescription(despription_id) array
     }
@@ -30,18 +32,14 @@ classDiagram
     class Price {
         +integer: id
         +integer: value
-        +integer: type_value
         +integer: activity_id
         +integer: coin_type_id
-        +datetime: date_created
-        +datetime: date_updated
     }
     class Coin_type {
         +integer: id
         +string: name
-        +string: tag
-        +datetime: date_created
-        +datetime: date_updated
+        +string: short_name
+        +int: status
     }
     class Description{
         +integer: id
@@ -49,16 +47,12 @@ classDiagram
         +text: short_value
         +integer: activity_id
         +integer: language_id
-        +datetime: date_created
-        +datetime: date_updated
     }
     class Language {
         +integer: id
         +string: name
         +string: short_name
         +integer: status
-        +datetime: date_created
-        +datetime: date_updated
     }
-            
+                
 ```  
